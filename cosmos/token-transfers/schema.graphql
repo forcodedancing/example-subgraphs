@@ -1,0 +1,12 @@
+type Token @entity {
+  id: ID!
+  amount: String
+  denom: String
+}
+
+type TokenTransfer @entity {
+  id: ID!
+  sender: String
+  recipient: String
+  token: Token
+}

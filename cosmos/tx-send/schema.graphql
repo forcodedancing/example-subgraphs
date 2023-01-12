@@ -1,0 +1,12 @@
+type Send @entity {
+  id: ID!
+  fromAddress: String
+  toAddress: String
+  amount: Coin
+}
+
+type Coin @entity {
+  id: ID!
+  denom: String
+  amount: String
+}

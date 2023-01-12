@@ -6,6 +6,7 @@
   "scripts": {
     "prepare:cosmoshub": "mustache config/cosmoshub.json subgraph.template.yaml > subgraph.yaml",
     "prepare:osmosis": "mustache config/osmosis.json subgraph.template.yaml > subgraph.yaml",
+    "prepare:blog": "mustache config/blog.json subgraph.template.yaml > subgraph.yaml",
     "codegen": "graph codegen",
     "build": "graph build",
     "create-local": "graph create cosmos-block-filtering --node http://127.0.0.1:8020",
@@ -16,7 +17,7 @@
   },
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.30.0",
-    "@graphprotocol/graph-ts": "^0.27.0",
+    "@graphprotocol/graph-ts": "^0.29.0",
     "mustache": "^4.2.0"
   },
   "dependencies": {

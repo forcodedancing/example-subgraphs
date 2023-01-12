@@ -1,0 +1,23 @@
+{
+  "name": "token-transfers",
+  "version": "0.1.0",
+  "repository": "https://github.com/graphprotocol/example-subgraph",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "create-local": "graph create token-transfers --node http://0.0.0.0:8020",
+    "deploy-local": "graph deploy token-transfers -l v0.1.0 --ipfs http://0.0.0.0:5001 --node http://0.0.0.0:8020",
+    "remove-local": "graph remove token-transfers --node http://0.0.0.0:8020",
+    "create": "graph create token-transfers --node https://api.thegraph.com/deploy/",
+    "deploy": "graph deploy token-transfers --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.30.0",
+    "@graphprotocol/graph-ts": "^0.27.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "babel-register": "^6.26.0"
+  }
+}

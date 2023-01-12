@@ -1,5 +1,5 @@
 specVersion: 0.0.5
-description: Block Filtering Example
+description: Send Token Tx Example
 repository: https://github.com/graphprotocol/example-subgraphs
 schema:
   file: ./schema.graphql
@@ -13,7 +13,8 @@ dataSources:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - Block
-      blockHandlers:
-        - handler: handleBlock
+        - Delegation
+        - Coin
+      transactionHandlers:
+        - handler: handleTx
       file: ./src/mapping.ts

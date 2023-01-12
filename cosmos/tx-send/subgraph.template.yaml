@@ -1,19 +1,20 @@
 specVersion: 0.0.5
-description: Block Filtering Example
+description: Validator Delegations Example
 repository: https://github.com/graphprotocol/example-subgraphs
 schema:
   file: ./schema.graphql
 dataSources:
   - kind: cosmos
-    name: Blog
-    network: blog
+    name: {{ name }}
+    network: {{ network }}
     source:
       startBlock: 0
     mapping:
       apiVersion: 0.0.7
       language: wasm/assemblyscript
       entities:
-        - Block
-      blockHandlers:
-        - handler: handleBlock
+        - Delegation
+        - Coin
+      transactionHandlers:
+        - handler: handleTx
       file: ./src/mapping.ts
